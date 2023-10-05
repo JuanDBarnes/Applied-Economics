@@ -1,0 +1,40 @@
+		(1)	(2)
+VARIABLES	LABELS	Satisfacción con la vida	Satisfacción con la vida
+			
+tincm_100	Igreso Real del Hogar	0.000940***	0.00158***
+		(0.000351)	(0.000393)
+satecc	Satisfaccion Econ.	0.506***	0.514***
+		(0.0231)	(0.0229)
+yearage	Edad en Años	-0.000936	-0.0206***
+		(0.00147)	(0.00670)
+sq_yearag	sq_yearag		0.000201***
+			(6.77e-05)
+cmedin	Cobertura Medica	0.222***	0.232***
+		(0.0610)	(0.0597)
+evalhl	Autoeval. salud	0.229***	0.224***
+		(0.0299)	(0.0300)
+smokes	Fumador		0.0659
+			(0.0437)
+alclmo	Toma Alcohol		0.0540
+			(0.0408)
+marsta1	Married	-0.0825	-0.00798
+		(0.0618)	(0.0651)
+marsta2	Living Together	-0.0921	-0.0403
+		(0.0876)	(0.0893)
+marsta3	Divorced	-0.146*	-0.0726
+		(0.0861)	(0.0881)
+marsta4	Widowed	-0.187**	-0.149*
+		(0.0870)	(0.0855)
+Zona2	geo==     2.0000	-0.0111	-0.00112
+		(0.0689)	(0.0693)
+Zona3	geo==     3.0000	0.0344	0.0248
+		(0.0560)	(0.0553)
+totexp_100	Gasto Real del Hogar	0.00104***	
+		(0.000322)	
+Constant	Constant	0.538***	0.872***
+		(0.157)	(0.192)
+			
+Observations		2,350	2,404
+R-squared		0.306	0.310
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

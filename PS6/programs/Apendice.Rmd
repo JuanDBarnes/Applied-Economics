@@ -1,0 +1,15 @@
+---
+title: "Apéndice. Codigo PS5 (STATA)"
+output: pdf_document
+date: "2023-08-17"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+
+```{r}
+
+
+```
