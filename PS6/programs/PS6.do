@@ -15,7 +15,7 @@ Este archivo sigue la siguiente estructura:
 * 0) Set up environment
 *==============================================================================*/
 clear all
-global main "C:\Users\rodri\OneDrive\Escritorio\Economía Aplicada\Economía Aplicada (Rodri)\TPS\TP5"
+global main "C:\Users\Usuario\Desktop\MAESTRIA\Economia Aplicada\TPs\PS6"
 global input "$main/input"
 global output "$main/output"
 

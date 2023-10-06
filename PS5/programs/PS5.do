@@ -16,7 +16,7 @@ Este archivo sigue la siguiente estructura:
 *==============================================================================*/
 clear all
 set maxvar 32767
-global main "C:\Users\rodri\OneDrive\Escritorio\Economía Aplicada\Economía Aplicada (Rodri)\TPS\TP5"
+global main "C:\Users\Usuario\Desktop\MAESTRIA\Economia Aplicada\TPs\PS5"
 global input "$main/input"
 global output "$main/output"
 
