@@ -1,0 +1,34 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{12}{c}}
+\hline\hline
+&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}&\multicolumn{1}{c}{(9)}&\multicolumn{1}{c}{(10)}&\multicolumn{1}{c}{(11)}&\multicolumn{1}{c}{(12)}\\
+&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}&\multicolumn{1}{c}{Log(Burglary Rate)}\\
+&        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         &        b/se         \\
+\hline
+Castle Doctrine Law &      0.0717\sym{**} &      0.0269         &      0.0207         &      0.0174         &      0.0322\sym{*}  &      0.0226         &      0.0515\sym{*}  &      0.0087         &      0.0059         &      0.0033         &      0.0075         &      0.0203         \\
+&    (0.0230)         &    (0.0203)         &    (0.0187)         &    (0.0203)         &    (0.0144)         &    (0.0151)         &    (0.0250)         &    (0.0252)         &    (0.0235)         &    (0.0263)         &    (0.0201)         &    (0.0189)         \\
+0 to 2 years before adoption of castle doctrine law&                     &                     &                     &     -0.0109         &                     &                     &                     &                     &                     &     -0.0090         &                     &                     \\
+&                     &                     &                     &    (0.0106)         &                     &                     &                     &                     &                     &    (0.0155)         &                     &                     \\
+\hline
+\multicolumn{12}{l}{\linebreak \textbf{\textit{Panel B: Robbery}}} \\
+Castle Doctrine Law &      0.0384         &      0.0335         &      0.0268         &      0.0223         &      0.0396\sym{**} &      0.0471\sym{*}  &      0.0399         &      0.0294         &      0.0126         &      0.0077         &      0.0144         &      0.0200         \\
+&    (0.0219)         &    (0.0189)         &    (0.0193)         &    (0.0199)         &    (0.0145)         &    (0.0223)         &    (0.0296)         &    (0.0370)         &    (0.0340)         &    (0.0371)         &    (0.0300)         &    (0.0311)         \\
+0 to 2 years before adoption of castle doctrine law&                     &                     &                     &     -0.0149         &                     &                     &                     &                     &                     &     -0.0168         &                     &                     \\
+&                     &                     &                     &    (0.0136)         &                     &                     &                     &                     &                     &    (0.0184)         &                     &                     \\
+\hline
+\multicolumn{12}{l}{\linebreak \textbf{\textit{Panel C: Aggravated Assault}}} \\
+Castle Doctrine Law &      0.0368         &      0.0335         &      0.0294         &      0.0251         &      0.0353         &      0.0266         &      0.0498         &      0.0630         &      0.0307         &      0.0284         &      0.0315         &      0.0232         \\
+&    (0.0342)         &    (0.0342)         &    (0.0276)         &    (0.0287)         &    (0.0247)         &    (0.0210)         &    (0.0520)         &    (0.0527)         &    (0.0359)         &    (0.0385)         &    (0.0331)         &    (0.0238)         \\
+0 to 2 years before adoption of castle doctrine law&                     &                     &                     &     -0.0142         &                     &                     &                     &                     &                     &     -0.0081         &                     &                     \\
+&                     &                     &                     &    (0.0106)         &                     &                     &                     &                     &                     &    (0.0202)         &                     &                     \\
+State and Year Fixed Effects &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+Region-by-Year Fixed Effects &          No         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &          No         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+Time-Varying Controls &          No         &          No         &         Yes         &         Yes         &         Yes         &         Yes         &          No         &          No         &         Yes         &         Yes         &         Yes         &         Yes         \\
+Contemporaneous Crime Rates &          No         &          No         &          No         &          No         &         Yes         &          No         &          No         &          No         &          No         &          No         &         Yes         &          No         \\
+State-Specific Linear Time Trends &          No         &          No         &          No         &          No         &          No         &         Yes         &          No         &          No         &          No         &          No         &          No         &         Yes         \\
+\hline
+Observations        &         550         &         550         &         550         &         550         &         550         &         550         &         550         &         550         &         550         &         550         &         550         &         550         \\
+\hline\hline
+\end{tabular}
+}
