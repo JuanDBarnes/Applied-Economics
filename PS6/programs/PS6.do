@@ -206,9 +206,9 @@ cd "$main"
 * 2) Replica Panel C. 1 with Callaway y Sant’Anna’s Estimator
 *==============================================================================*/
 
-ssc install csdid
-ssc install drdid
-ssc install bacondecomp
+* ssc install csdid
+* ssc install drdid
+
 
 bys state: gen treat = year if cdl>0 & cdl<1
 bys state: egen treated = max(treat)
@@ -235,16 +235,16 @@ csdid_plot, group(2008) name(m3,replace) title("Group 2008")
 csdid_plot, group(2009) name(m4,replace) title("Group 2009")
 graph combine m1 m2 m3 m4, xcommon scale(0.8)
 
-graph export "$output\4Years_ES.png", as(png) name("Graph") replace
+graph export "$output\4_Years.png", as(png) name("Graph") replace
 
 
 *******************************************************************************/
 * 3) Descomposición de Bacon para log(Burglary Rate)
 *==============================================================================*/
-ssc install bacondecomp
+* ssc install bacondecomp
 
 bacondecomp l_burglary post , stub(Bacon_) ddetail
 
-graph export "$output\Bacon.png", as(png) name("Graph") replace
+graph export "$output\Bacon_decomp.png", as(png) name("Graph") replace
 
 ********************************************************************************

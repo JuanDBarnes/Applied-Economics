@@ -1,5 +1,5 @@
 ---
-title: "Apéndice. Codigo PS5 (STATA)"
+title: "Apéndice. Codigo PS6 (STATA)"
 output: pdf_document
 date: "2023-08-17"
 ---
