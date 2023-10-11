@@ -1,5 +1,5 @@
 /*******************************************************************************
-                   Problem Set 6: diff-in-diffs 
+		     			Problem Set 6: diff-in-diffs 
 
                           Universidad de San Andrés
                               Economía Aplicada
@@ -26,10 +26,15 @@ cd "$main"
 * Open data
 
 use "$input/castle.dta", clear 
-browse 
 
+
+
+* Set ipaplots scheme
+ssc install blindschemes, replace
 net install cleanplots, from("https://tdmize.github.io/data/cleanplots")
+
 set scheme cleanplots
+
 
 * define global macros (like Cunningham)
 global crime1 jhcitizen_c jhpolice_c murder homicide robbery assault burglary larceny motor robbery_gun_r 
@@ -49,19 +54,6 @@ label var pre2_cdl "0 to 2 years before adoption of castle doctrine law"
 *******************************************************************************/
 * 1) Replica de la Tabla 4 (Cheng y Hoekstra, 2013)
 *==============================================================================*/
-* Especificaciones:}
-* 1.
-* 2.
-* 3.
-* 4.
-* 5. 
-* 6.
-* 7.
-* 8.
-* 9.
-* 10.
-* 11.
-* 12.
 *******************************************************************************/
 * PANEL A
 eststo clear
@@ -210,11 +202,7 @@ cd "$main"
 * ssc install drdid
 
 
-bys state: gen treat = year if cdl>0 & cdl<1
-bys state: egen treated = max(treat)
-replace treated = 0 if treated == .
-
-csdid l_assault post i.year i.sid [weight=popwt], ivar(sid) time(year) gvar(treated) method(reg) notyet
+csdid l_assault post i.year i.sid [weight=popwt], ivar(sid) time(year) gvar(effyear) method(reg) notyet
 
 * Pretrends test
 
@@ -229,22 +217,36 @@ csdid_plot
 
 graph export "$output\EventStudy.png", as(png) name("Graph") replace
 
+
+csdid l_assault post [weight=popwt], ivar(sid) time(year) gvar(effyear) method(reg) notyet
+
+csdid_plot
 csdid_plot, group(2006) name(m1,replace) title("Group 2006")
 csdid_plot, group(2007) name(m2,replace) title("Group 2007")
 csdid_plot, group(2008) name(m3,replace) title("Group 2008")
 csdid_plot, group(2009) name(m4,replace) title("Group 2009")
 graph combine m1 m2 m3 m4, xcommon scale(0.8)
 
-graph export "$output\4_Years.png", as(png) name("Graph") replace
+graph export "$output\4_Years_ES.png", as(png) name("Graph") replace
 
 
 *******************************************************************************/
 * 3) Descomposición de Bacon para log(Burglary Rate)
 *==============================================================================*/
+* Opcion 1 (General)
 * ssc install bacondecomp
+* bacondecomp l_burglary post , stub(Bacon_) ddetail
+* Opcion 2 (Like Cunningham book)
+* install
+net install ddtiming, from(https://tgoldring.com/code)
+net get ddtiming
 
-bacondecomp l_burglary post , stub(Bacon_) ddetail
+* bacon decomp graph
+ddtiming l_burglary post, i(sid) t(year) ///
+ legend(pos(7)) name(becondecomposition1)
 
-graph export "$output\Bacon_decomp.png", as(png) name("Graph") replace
+* save graph
+graph export "$output\Bacon_decomp.png", as(png) name("becondecomposition1") replace
 
 ********************************************************************************
+translate "$main/programs/PS6.do" "$output/Apendice.pdf", translator(txt2pdf) replace
